@@ -64,6 +64,7 @@ public class MainActivity extends ActionBarActivity {
 //        startActivity(i);
 
         MySQLiteHelper s1 = new MySQLiteHelper(MainActivity.this);
+        s1.getWritableDatabase();
 //        SharedPreferences sharedPreferences = getSharedPreferences("Defaults",MODE_PRIVATE);
 //        AlertDialog.Builder a = new AlertDialog.Builder(MainActivity.this);
 //        a.setTitle(sharedPreferences.getString("hello","nothing123"));

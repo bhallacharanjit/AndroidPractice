@@ -24,8 +24,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + " text not null);";
 
 
-    private static final String DATABASE_INSERT = "insert into"
-            + TABLE_COMMENTS + "values ('malkit')";
+    private static final String DATABASE_INSERT = "insert into "
+            + TABLE_COMMENTS + " ("+COLUMN_COMMENT+") values ('malkit')";
+
+
 
     public MySQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -33,6 +35,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
+        Log.d("coming here","coming her");
         database.execSQL(DATABASE_CREATE);
         database.execSQL(DATABASE_INSERT);
     }
